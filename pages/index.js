@@ -2,8 +2,8 @@ import react from 'react'
 
 const Index = () => {
 
-    const data = await fetch('https://api.to.wtf/ping');
-    console.log(data);
+    // const data = fetch('https://api.to.wtf/ping');
+    // console.log(data);
 
     return (
         <div>
