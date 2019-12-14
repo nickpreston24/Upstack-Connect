@@ -1,0 +1,11 @@
+{
+  "name": "upstack-connect",
+  "version": "1.0.0",
+  "description": "A couch-locator for hardworking UpStackers",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
