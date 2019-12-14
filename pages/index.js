@@ -1,6 +1,7 @@
 
 const Index = () => {
-  
+
+    const msg = 'Nothing here yet...'
     return (
         <div>
             <h1>Hello & Welcome to Upstack Connect!</h1>
