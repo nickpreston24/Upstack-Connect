@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
+import axios from 'axios';
 
 const Profile = (props) => {
 
@@ -43,27 +44,25 @@ const Profile = (props) => {
 
 }
 
-// Profile.getInitialProps = async function () {
-//     const query = 'https://api.to.wtf/ping'
-//     const fetchData = async () => {
-//         console.log(`running query: ${query} `);
-//         const call = await fetch(query)
-//         // .then((result) => console.log(result))
-//         // .catch(console.error)
-
-//         const data = await call.json();
-//         console.log('data:', data)
-//     }
-//     fetchData()
-// }
-
 Profile.getInitialProps = async function () {
-    const res = await fetch('https://api.to.wtf/ping');
-    const data = await res.value//.json();
-    console.log('data: ', data);
+    const query = 'https://api.to.wtf/api/users'
+
+    const res = await fetch(query);
+    const data = await res.json();
+
+    console.log("query", query, 'result: ', data);
+
+    // const resX = await axios.get("GET", { query })
+    //     .then(r => console.log('result:', r))
+    //     .catch(console.error)
+
+    // const data = await res.value//.json();
+    // console.log('data: ', data);
+
     // console.log(`Show data fetched. Count: ${data.length}`);
+
     return {
-        data: {}
+        profile: { data }
     }
     // return {
     //     shows: data.map(entry => entry.show)
