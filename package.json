@@ -4,8 +4,18 @@
   "description": "A couch-locator for hardworking UpStackers",
   "main": "index.js",
   "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
     "test": "test"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.7.2",
+    "next": "^9.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
 }
