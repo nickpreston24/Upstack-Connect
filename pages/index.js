@@ -1,13 +1,11 @@
-import react from 'react'
 
 const Index = () => {
-
-    // const data = fetch('https://api.to.wtf/ping');
-    // console.log(data);
-
+  
     return (
         <div>
             <h1>Hello & Welcome to Upstack Connect!</h1>
+            <p>Some data:</p>
+            <i>`${msg}`</i>
         </div>
     )
 }
