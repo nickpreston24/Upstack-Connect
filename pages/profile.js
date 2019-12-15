@@ -1,21 +1,11 @@
-import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import axios from 'axios';
+import Layout from './layout';
 
 const Profile = (props) => {
 
-    // <MyContext.Consumer>
-
-    //     {(context) => {
-    //         const entries = Object.values(context);
-    //         console.log(context, entries)
-
     return (
-        <div>
-            <Link href="/">
-                <a>Go Home</a>
-            </Link>
-            {/* <h1>Batman TV Shows</h1> */}
+        <Layout>            
             <ul>
                 {/* {props.shows.map(show => (
                     <li key={show.id}>
@@ -35,17 +25,14 @@ const Profile = (props) => {
 
                 Et dolor do consectetur duis sunt sit dolor nulla nulla in. Adipisicing minim officia voluptate nisi reprehenderit ad ullamco incididunt do labore cillum ad. Minim nisi consectetur pariatur aliquip labore esse duis ut ex amet ea voluptate excepteur. Adipisicing anim consectetur consequat ex commodo adipisicing sunt exercitation quis aliqua proident labore aute eu. Ut Lorem aute ea fugiat consequat qui laboris pariatur consequat. Tempor nisi magna deserunt quis eiusmod fugiat irure reprehenderit exercitation commodo.
                     </p>
-        </div>
+        </Layout>
     )
-
-    // }}
-
-    // </MyContext.Consumer>
-
 }
 
 Profile.getInitialProps = async function () {
-    const query = 'https://api.to.wtf/api/users'
+    const queries = ['https://api.to.wtf/api/users', 'https://to.wtf/user/chats', 'https://api.to.wtf/user/chats?page=1&limit=100']
+
+    const query = queries[0];
 
     const res = await fetch(query);
     const data = await res.json();

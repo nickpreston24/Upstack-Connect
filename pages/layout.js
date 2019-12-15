@@ -26,7 +26,14 @@ const layoutStyle = {
 
 const Layout = props => (
   <div style={layoutStyle}>
-    <Header />
+
+    {/* TODO: finish creating an auth context here so all pages have access to our auth context */}
+    {/* <Auth.Consumer>
+      {(context) => {
+        const entries = Object.values(context);
+        console.log(context, entries) */}
+
+    < Header />
     {props.children}
   </div>
 )
