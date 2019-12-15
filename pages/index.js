@@ -1,28 +1,23 @@
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+import React from 'react'
+import Layout from './layout'
 
-const Index = () => { 
+const style = {
+    h1: { color: 555 },
+    p: { color: 555 },
+    i: { color: 555 }
+}
+
+const Index = () => {
 
     const msg = 'Nothing here yet...'
+    const { h1, p, i } = style;
+
     return (
-
-        <div>
-            <h1>Hello & Welcome to Upstack Connect!</h1>
-            <p>Some data:</p>
-            <i>{`${msg}`}</i>
-
-            {/* Navbar mock */}
-            <br />
-            <Link href="/profile">
-                <a>Profile</a>
-            </Link>
-            <br />
-            <Link href="/about">
-                <a>About Upstack</a>
-            </Link>
-            <br />
-
-        </div>
+        <Layout>
+            <h1 style={h1}>Hello & Welcome to Upstack Connect!</h1>
+            <p style={p}>Some data:</p>
+            <i style={i}>{`${msg}`}</i>
+        </Layout>
     )
 }
 
