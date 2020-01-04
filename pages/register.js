@@ -1,19 +1,21 @@
 import Link from 'next/link';
 import axios from 'axios';
+import sha1 from 'sha1'
 
 const Profile = (props) => {
 
     function signUp() {
 
         const query = 'api/register'
+        const password = sha1("demoday2019")
+        console.log('Sha1 password: ', password);
 
         const postData = {
             "first_name": "Michael",
             "last_name": "Preston",
             phone: "+359884909301",
             email: "michael.n.preston@gmail.com",
-            // password: "demoday",
-            password: "daef4953b9783365cad6615223720506cc46c5167cd16ab500fa597aa08ff964eb24fb19687f34d7665f778fcb6c5358fc0a5b81e1662cf90f73a2671c53f991",
+            password: password,
             address: "105 Bleecker Street",
             city: "Brooklyn",
             "pic_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTw3dxAr-998XQnx4i8BeI2Gk3AUo2U-Wu7MO3nPTqIFIB2btxL",
